@@ -1,0 +1,9 @@
+Configurar os guardas em config/auth.php
+    Configurar a model tbm, especificando o guarda a qual a model se refere.
+        protected $guard = 'admin'; //Por exemplo
+
+Não precisa criar uma tabela de passwords_resets para cada tipo de usuário.
+    Ela é compartilhada com todos os models de Users.
+    É só configurar em auth.php tbm no final do arquivo, em 'passwords'.
+
+No construtor do controlador do Admin, colocar o guard!
